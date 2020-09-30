@@ -1,0 +1,46 @@
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 110px;
+  background-color: #fafafa;
+}
+
+.navigation-categories {
+  align-items: center;
+}
+
+.navigation-categories ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-categories ul li {
+  margin: 0 36px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  align-items: center;
+}
+
+.account-info {
+  display: flex;
+  align-items: center;
+}
+
+.account-info div {
+  margin-left: 36px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.black {
+  color: #252525;
+}
+.green {
+  color: #17aba6;
+}
