@@ -1,0 +1,46 @@
+.quantity {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 160px;
+  margin: 0 32px;
+  border: 2px solid #17aba6;
+  border-radius: 22px;
+  height: 45px;
+}
+
+.plus,
+.minus {
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #17aba6;
+}
+
+.plus {
+  margin-right: 12px;
+}
+
+.minus,
+.disabled {
+  margin-left: 12px;
+}
+
+.disabled {
+  color: #b0e3d9;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.quantity-input {
+  width: 30px;
+  border: 0;
+  background: none;
+  text-align: center;
+  pointer-events: none;
+  font-size: 22px;
+}

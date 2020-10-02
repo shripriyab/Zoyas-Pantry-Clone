@@ -81,8 +81,21 @@
 .black {
   color: #252525;
 }
+
 .green {
   color: #17aba6;
+}
+
+.green:hover {
+  color: #402661;
+}
+
+.purple {
+  color: #402661;
+}
+
+.purple:hover {
+  color: #f77566;
 }
 
 .search-bar {

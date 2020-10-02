@@ -1,0 +1,19 @@
+.out-of-stock {
+  border: 2px solid #b0e3d9;
+  background: transparent;
+  width: 115px;
+  padding: 8px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #402661;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.out-of-stock p {
+  letter-spacing: 0.7px;
+  padding: 0;
+  margin: 0;
+}

@@ -58,7 +58,7 @@ class Navbar extends Component<NavbarProps, NavbarState> {
             <li className="pantry black">
               Pantry <FontAwesomeIcon icon={faChevronDown} />
             </li>
-            <li className="black">Whole Foods</li>
+            <li className="purple">Whole Foods</li>
             <li className="green">New In</li>
             <li className="green">Best Sellers </li>
           </ul>
