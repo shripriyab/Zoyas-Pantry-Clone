@@ -1,13 +1,13 @@
-.custom-button a {
+.custom-button > a {
   position: relative;
   background: transparent;
   border-radius: 30px;
   text-decoration: none;
   font-weight: 600;
-  padding: 8px;
+  padding: 10px;
   border-radius: 50px;
   color: #402661;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
   z-index: 1;
   display: flex;
@@ -16,12 +16,12 @@
   letter-spacing: 0.7px;
 }
 
-.custom-button a:hover,
-a:visited {
+.custom-button > a:hover,
+.custom-button > a:visited {
   color: #402661;
 }
 
-.custom-button a::before {
+.custom-button > a::before {
   content: "";
   position: absolute;
   top: 0;
