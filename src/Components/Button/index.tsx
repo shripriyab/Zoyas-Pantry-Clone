@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import "./Button.css";
 
 type ButtonProps = {
-  text: string;
-  width: number;
+  text: string,
+  width: number,
 };
 
 export default function Button({ text, width }: ButtonProps) {
