@@ -9,13 +9,26 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 type DataProps = {
-  id: number;
-  name: string;
-  imageUrl: string;
-  price: number;
+  title: string;
   category: string;
-  inWishlist: boolean;
+  imageUrl: string;
+  weight: string;
+  price: number;
+  meta: Metadata;
+  tags: Array<string>;
   inStock: boolean;
+  description: Description;
+};
+
+type Description = {
+  productInformation: string;
+  storageInstruction: string;
+  shippingInformation: string;
+};
+
+type Metadata = {
+  sku: string;
+  brand: string;
 };
 
 type ProductProps = {};
@@ -64,21 +77,20 @@ export default class Products extends Component<ProductProps, ProductState> {
           <div className="product-display">
             {products.map(
               ({
-                id,
-                name,
-                imageUrl,
-                price,
+                title,
                 category,
-                inWishlist,
+                imageUrl,
+                weight,
+                price,
                 inStock,
               }: DataProps) => (
                 <ProductCard
-                  key={id}
-                  name={name}
-                  imageUrl={imageUrl}
-                  price={price}
+                  key={title}
+                  title={title}
                   category={category}
-                  inWishlist={inWishlist}
+                  imageUrl={imageUrl}
+                  weight={weight}
+                  price={price}
                   inStock={inStock}
                 />
               )

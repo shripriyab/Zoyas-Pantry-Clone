@@ -58,6 +58,17 @@
   outline: none;
 }
 
+#firstName,
+#lastName,
+#email,
+#password {
+  width: 100%;
+  padding: 0 0 8px;
+  border: 0;
+  border-bottom: 1px solid #b5b5b5;
+  background-color: transparent;
+}
+
 .sign-up {
   display: flex;
   align-items: center;

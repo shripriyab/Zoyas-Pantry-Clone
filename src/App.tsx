@@ -16,7 +16,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Route path="/" exact component={Home} />
-        <Route path="/product-category" exact component={Products} />
+        <Route path="/category" exact component={Products} />
         <Route path="/product/:name" exact component={ProductData} />
         <Route path="/login" exact component={Login} />
         <Route path="/register" exact component={Register} />

@@ -10,23 +10,23 @@ import Button from "../Button";
 import OutOfStock from "../OutofStockButton";
 
 type ProductCardProps = {
-  name: string;
-  imageUrl: string;
-  price: number;
+  title: string;
   category: string;
-  inWishlist: boolean;
+  imageUrl: string;
+  weight: string;
+  price: number;
   inStock: boolean;
 };
 
 export default function ProductCard({
-  name,
+  title,
   imageUrl,
+  weight,
   price,
   category,
-  inWishlist,
   inStock,
 }: ProductCardProps) {
-  let addButton = inStock ? (
+  const addButton = inStock ? (
     <Button text={"Add to Bag"} width={115} />
   ) : (
     <OutOfStock />
@@ -34,14 +34,14 @@ export default function ProductCard({
   return (
     <div className="product-card">
       <div className="product-image">
-        <img src={imageUrl} alt={name} />
+        <img src={imageUrl} alt={title} />
       </div>
       <div className="wishlist">
-        <Icon icon={inWishlist ? heartSolid : heartLine} />
+        <Icon icon={heartLine} />
       </div>
       <div className="product-details">
         <div className="product-category">{category}</div>
-        <div className="product-name">{name}</div>
+        <div className="product-name">{title}</div>
         <div className="product-order">
           <div className="product-price">${price}</div>
           <div>{addButton}</div>

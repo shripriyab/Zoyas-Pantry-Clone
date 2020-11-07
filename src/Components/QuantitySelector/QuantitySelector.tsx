@@ -1,56 +1,38 @@
-import React, { Component } from "react";
-
-import "./QuantitySelector.css";
-
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
-type QuantityProps = {};
+import "./QuantitySelector.css";
 
-type QuantityState = {
-  quantity: number;
-};
+function QuantitySelector() {
+  const [quantity, setQuantity] = useState<number>(1);
 
-export default class QuantitySelector extends Component<
-  QuantityProps,
-  QuantityState
-> {
-  constructor(props: QuantityProps) {
-    super(props);
-
-    this.state = {
-      quantity: 1,
-    };
-  }
-
-  addQuantityToBag = (value: number) => {
-    this.setState((prevState) => ({
-      quantity: prevState.quantity + value,
-    }));
+  const updateQuantityToBag = (value: number) => {
+    setQuantity((quantity) => quantity + value);
   };
 
-  render() {
-    const { quantity } = this.state;
-    const minusClass = quantity <= 1 ? "disabled" : "minus";
-    return (
-      <div className="quantity">
-        <button
-          type="button"
-          className={minusClass}
-          disabled={quantity <= 1}
-          onClick={() => this.addQuantityToBag(-1)}
-        >
-          <FontAwesomeIcon icon={faMinus} />
-        </button>
-        <div className="quantity-input">{quantity}</div>
-        <button
-          type="button"
-          className="plus"
-          onClick={() => this.addQuantityToBag(1)}
-        >
-          <FontAwesomeIcon icon={faPlus} />
-        </button>
-      </div>
-    );
-  }
+  const minusClass = quantity <= 1 ? "disabled" : "minus";
+
+  return (
+    <div className="quantity">
+      <button
+        type="button"
+        className={minusClass}
+        disabled={quantity <= 1}
+        onClick={() => updateQuantityToBag(-1)}
+      >
+        <FontAwesomeIcon icon={faMinus} />
+      </button>
+      <div className="quantity-input">{quantity}</div>
+      <button
+        type="button"
+        className="plus"
+        onClick={() => updateQuantityToBag(1)}
+      >
+        <FontAwesomeIcon icon={faPlus} />
+      </button>
+    </div>
+  );
 }
+
+export default QuantitySelector;
