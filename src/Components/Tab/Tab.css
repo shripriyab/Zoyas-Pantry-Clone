@@ -1,0 +1,17 @@
+.tab {
+  display: flex;
+  justify-content: center;
+  padding: 0 12px 12px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+}
+
+.tab > p {
+  margin: 0;
+}
+
+.active {
+  border-bottom: 2px solid #402661;
+  color: #252525;
+  font-weight: bold;
+}
