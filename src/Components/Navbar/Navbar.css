@@ -5,16 +5,16 @@
 }
 
 .navbar {
-  display: flex;
-  position: relative;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1.5fr 6.5fr 2fr;
+  height: 118px;
   align-items: center;
-  padding: 30px 110px;
-  background-color: #fafafa;
+  justify-items: center;
+  position: relative;
 }
 
-.logo {
-  margin-right: 36px;
+.company-logo {
+  justify-self: start;
 }
 
 .navigation-categories {
@@ -48,6 +48,7 @@
 .account-info {
   display: flex;
   align-items: center;
+  justify-self: end;
 }
 
 .account-info > div {
@@ -84,6 +85,7 @@
 
 .green {
   color: #17aba6;
+  transition: 300ms;
 }
 
 .green:hover {
@@ -96,6 +98,7 @@
 
 .purple:hover {
   color: #f77566;
+  transition: 300ms;
 }
 
 .search-bar {
@@ -103,7 +106,7 @@
   position: absolute;
   top: 100%;
   left: 50%;
-  width: calc(100% - 220px);
+  width: 100%;
   background-color: #fafafa;
   letter-spacing: 1px;
   font-weight: 700;

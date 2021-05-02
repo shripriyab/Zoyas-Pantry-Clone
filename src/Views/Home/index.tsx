@@ -9,7 +9,7 @@ function Home() {
       <div className="banner-container">
         <div className="banner-content">
           <div className="banner-heading">
-            Your one stop <strong>healthy & organic</strong> online store
+            Your one stop <strong>healthy &amp; organic</strong> online store
           </div>
           <div className="banner-data">
             From local products to fresh produce, our expert team members will

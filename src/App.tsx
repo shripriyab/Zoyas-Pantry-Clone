@@ -14,12 +14,14 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <Route path="/" exact component={Home} />
-        <Route path="/category" exact component={Products} />
-        <Route path="/product/:name" exact component={Product} />
-        <Route path="/login" exact component={Login} />
-        <Route path="/register" exact component={Register} />
-        <Route path="/wishlist" exact component={Wishlist} />
+        <div className="body">
+          <Route path="/" exact component={Home} />
+          <Route path="/category" exact component={Products} />
+          <Route path="/product/:name" exact component={Product} />
+          <Route path="/login" exact component={Login} />
+          <Route path="/register" exact component={Register} />
+          <Route path="/wishlist" exact component={Wishlist} />
+        </div>
       </BrowserRouter>
     </div>
   );

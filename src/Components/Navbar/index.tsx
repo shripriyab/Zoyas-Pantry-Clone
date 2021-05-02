@@ -17,11 +17,11 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      <Link to="/">
-        <div className="logo">
-          <img src={logo} alt="logo" />
-        </div>
-      </Link>
+      <div className="company-logo">
+        <Link to="/">
+          <img src={logo} alt="company-logo" />
+        </Link>
+      </div>
       <div className="navigation-categories">
         <ul>
           <li className="pantry black">

@@ -1,0 +1,46 @@
+.filter-by {
+  position: relative;
+  width: 100%;
+}
+
+.filter-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #17aba6;
+  padding: 8px 40px;
+  border-radius: 20px;
+  width: 32%;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.filter-title > p {
+  margin: 0;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.hide-filter {
+  display: none;
+}
+
+.filter-list {
+  background-color: #ffffff;
+  box-shadow: 0 0 10px 6px rgba(141, 141, 141, 0.15);
+  border-radius: 20px;
+  width: 100%;
+  z-index: 10;
+  position: absolute;
+  top: 55px;
+  left: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 8px 24px;
+}

@@ -5130,6 +5130,8 @@ export const filters = {
   Price: ["Under 10$", "10$ - 50$", "50$ - 100$", "Above $100"],
   "Religious based": ["Kosher"],
   Dietary: ["Vegan", "Organic"],
+} as {
+  [key: string]: string[];
 };
 
 export const cart = [
@@ -5275,4 +5277,27 @@ export const pantryList = [
   "Flours & Meals",
   "Seeds & Grains",
   "Organic Canned Vegetables",
+];
+
+export const sortOptions = [
+  {
+    id: 1,
+    name: "Our favorites",
+  },
+  {
+    id: 2,
+    name: "Sort by popularity",
+  },
+  {
+    id: 3,
+    name: "Sort by latest",
+  },
+  {
+    id: 4,
+    name: "Sort by price: low to high",
+  },
+  {
+    id: 5,
+    name: "Sort by price: high to low",
+  },
 ];

@@ -1,0 +1,35 @@
+li {
+  margin: 0;
+}
+
+.filter-section {
+  border-bottom: 1px solid #dddddd;
+  padding: 16px 0;
+}
+
+.filter-section ~ li:last-child {
+  border-bottom: none;
+}
+
+.filter-section-title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+
+.filter-section-title h4 {
+  margin: 0;
+  margin-right: 10px;
+}
+
+.subfilters {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  margin-top: 12px;
+}
+
+.subfilter {
+  cursor: pointer;
+}
