@@ -1,12 +1,9 @@
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { Component } from "react";
-
-import "./Products.css";
-
 import ProductCard from "../../Components/ProductCard";
 import { products } from "../../data";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import "./Products.css";
 
 type DataProps = {
   title: string;

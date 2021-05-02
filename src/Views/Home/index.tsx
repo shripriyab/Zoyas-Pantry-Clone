@@ -1,8 +1,7 @@
 import React from "react";
-
-import "./Home.css";
-import bannerImage from "./bannerImage.svg";
 import Button from "../../Components/Button";
+import bannerImage from "./bannerImage.svg";
+import "./Home.css";
 
 function Home() {
   return (

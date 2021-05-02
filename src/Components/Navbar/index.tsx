@@ -1,14 +1,12 @@
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import searchIcon from "@iconify/icons-bi/search";
+import heartLine from "@iconify/icons-clarity/heart-line";
+import smileyIcon from "@iconify/icons-codicon/smiley";
+import { Icon } from "@iconify/react";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
-import { Icon } from "@iconify/react";
-import searchIcon from "@iconify/icons-bi/search";
-import smileyIcon from "@iconify/icons-codicon/smiley";
-import heartLine from "@iconify/icons-clarity/heart-line";
-
 import logo from "./logo.svg";
-
 import "./Navbar.css";
 
 function Navbar() {

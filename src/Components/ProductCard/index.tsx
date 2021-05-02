@@ -1,13 +1,9 @@
-import React from "react";
-
-import "./ProductCard.css";
-
-import { Icon } from "@iconify/react";
 import heartLine from "@iconify/icons-clarity/heart-line";
-import heartSolid from "@iconify/icons-clarity/heart-solid";
-
+import { Icon } from "@iconify/react";
+import React from "react";
 import Button from "../Button";
 import OutOfStock from "../OutofStockButton";
+import "./ProductCard.css";
 
 type ProductCardProps = {
   title: string;

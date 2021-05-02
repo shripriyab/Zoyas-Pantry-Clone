@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./OutOfStock.css";
 
 export default function OutOfStock() {

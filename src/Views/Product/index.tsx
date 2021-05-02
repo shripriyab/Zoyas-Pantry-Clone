@@ -1,12 +1,10 @@
-import React, { useState } from "react";
-import { Icon } from "@iconify/react";
 import heartLine from "@iconify/icons-clarity/heart-line";
-
+import { Icon } from "@iconify/react";
+import React, { useState } from "react";
 import Button from "../../Components/Button";
-import QuantitySelector from "../../Components/QuantitySelector";
 import Content from "../../Components/Content";
+import QuantitySelector from "../../Components/QuantitySelector";
 import Tab from "../../Components/Tab";
-
 import "./Product.css";
 
 const data = {

@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
-
+import React, { useState } from "react";
 import "./QuantitySelector.css";
 
 function QuantitySelector() {
