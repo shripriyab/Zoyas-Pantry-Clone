@@ -1,10 +1,11 @@
-import outlineDone from "@iconify-icons/ic/outline-done";
 import filter24Filled from "@iconify-icons/fluent/filter-24-filled";
+import outlineDone from "@iconify-icons/ic/outline-done";
 import { Icon } from "@iconify/react";
 import React, { useState } from "react";
 import { filters } from "../../data";
 import "./Filters.css";
 import SubFilters from "./SubFilters";
+import closeIcon from "@iconify-icons/carbon/close";
 
 type selectedFilters = {
   [key: string]: string;
@@ -15,10 +16,19 @@ export default function Filters() {
   const [selectedFilters, setSelectedFilters] = useState<selectedFilters>({});
 
   const addFilter = (filter: string, subfilter: string) => {
-    setSelectedFilters({
-      ...selectedFilters,
-      [filter]: selectedFilters[filter] === subfilter ? "" : subfilter,
-    });
+    const updatedFilters: selectedFilters = { ...selectedFilters };
+    if (selectedFilters[filter] === subfilter) {
+      delete updatedFilters[filter];
+    } else {
+      updatedFilters[filter] = subfilter;
+    }
+    setSelectedFilters(updatedFilters);
+  };
+
+  const deleteFilter = (filter: string) => {
+    const updatedFilters: selectedFilters = { ...selectedFilters };
+    delete updatedFilters[filter];
+    setSelectedFilters(updatedFilters);
   };
 
   const filterTitle = isFilterOpen ? (
@@ -33,7 +43,7 @@ export default function Filters() {
     </>
   );
 
-  const filterClass = isFilterOpen ? "filter-list" : "hide-filter";
+  const filterClass = isFilterOpen ? "filter-body" : "hide-filter";
   return (
     <div className="filter-by">
       <div
@@ -42,24 +52,39 @@ export default function Filters() {
       >
         {filterTitle}
       </div>
-      {isFilterOpen && (
-        <ul className={filterClass}>
-          {Object.keys(filters).map((filter) => (
-            <SubFilters
-              filters={filters}
-              filter={filter}
-              key={filter}
-              addFilter={addFilter}
-            />
-          ))}
-        </ul>
-      )}
 
-      {Object.values(selectedFilters).map((name, index) => (
-        <div className="chip" key={`${name}_${index}`}>
-          {name}
+      <div className={filterClass}>
+        {isFilterOpen && (
+          <ul>
+            {Object.keys(filters).map((filter) => (
+              <SubFilters
+                filters={filters}
+                filter={filter}
+                key={filter}
+                addFilter={addFilter}
+                selectedFilters={selectedFilters}
+              />
+            ))}
+          </ul>
+        )}
+
+        <div className="filters-array">
+          {Object.keys(selectedFilters).map((filter) => (
+            <div className="chip" key={filter}>
+              {selectedFilters[filter]}
+              <div className="close-icon" onClick={() => deleteFilter(filter)}>
+                <Icon icon={closeIcon} />
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
+
+        {!!Object.values(selectedFilters).length && (
+          <div className="clear-all">
+            <span onClick={() => setSelectedFilters({})}>Clear All</span>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

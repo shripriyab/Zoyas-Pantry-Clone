@@ -1,11 +1,13 @@
-import React, { useState } from "react";
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState } from "react";
 import "./SubFilters.css";
+
 type SubFilterProps = {
   filters: Filters;
   filter: string;
   addFilter: (filter: string, subfilter: string) => void;
+  selectedFilters: { [key: string]: string };
 };
 
 type Filters = {
@@ -16,6 +18,7 @@ export default function SubFilters({
   filters,
   filter,
   addFilter,
+  selectedFilters,
 }: SubFilterProps) {
   const [isSubFilterOpen, setIsSubFilterOpen] = useState<boolean>(false);
 
@@ -33,7 +36,11 @@ export default function SubFilters({
           {filters[filter].map((subfilter) => (
             <div key={subfilter}>
               <span
-                className="subfilter"
+                className={
+                  selectedFilters[filter] === subfilter
+                    ? "subfilter subfilter-active"
+                    : "subfilter"
+                }
                 onClick={() => addFilter(filter, subfilter)}
               >
                 {subfilter}

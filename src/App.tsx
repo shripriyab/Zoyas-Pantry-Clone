@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/Navbar";
+import Cart from "./Views/Cart";
 import Home from "./Views/Home";
 import Login from "./Views/Login";
 import Product from "./Views/Product";
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
           <Route path="/wishlist" exact component={Wishlist} />
+          <Route path="/cart" exact component={Cart} />
         </div>
       </BrowserRouter>
     </div>

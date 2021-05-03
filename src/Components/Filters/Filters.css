@@ -1,3 +1,9 @@
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .filter-by {
   position: relative;
   width: 100%;
@@ -28,7 +34,7 @@
   display: none;
 }
 
-.filter-list {
+.filter-body {
   background-color: #ffffff;
   box-shadow: 0 0 10px 6px rgba(141, 141, 141, 0.15);
   border-radius: 20px;
@@ -37,10 +43,36 @@
   position: absolute;
   top: 55px;
   left: 0;
+  padding: 8px 24px;
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 8px 24px;
+.filters-array {
+  display: flex;
+}
+
+.chip {
+  border: 1px solid #17aba6;
+  border-radius: 20px;
+  padding: 0px 10px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-icon {
+  color: #17aba6;
+  font-size: 22px;
+  padding-top: 5px;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+.clear-all {
+  text-decoration: underline;
+  margin: 16px 0;
+}
+
+.clear-all > span {
+  cursor: pointer;
 }

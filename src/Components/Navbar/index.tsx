@@ -69,7 +69,9 @@ function Navbar() {
             <Icon icon={heartLine} />
           </Link>
         </div>
-        <div className="cart">0</div>
+        <div className="cart">
+          <Link to="/cart">0</Link>
+        </div>
       </div>
     </div>
   );

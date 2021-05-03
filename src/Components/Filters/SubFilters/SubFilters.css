@@ -13,14 +13,13 @@ li {
 
 .filter-section-title {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
 
 .filter-section-title h4 {
   margin: 0;
-  margin-right: 10px;
 }
 
 .subfilters {
@@ -32,4 +31,9 @@ li {
 
 .subfilter {
   cursor: pointer;
+}
+
+.subfilter-active {
+  color: #17aba6;
+  font-weight: bold;
 }
