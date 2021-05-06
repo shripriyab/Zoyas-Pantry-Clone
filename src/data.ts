@@ -1,4 +1,4 @@
-export const products = [
+export const shop = [
   {
     title: "100% Pure Maple Syrup Glass Handled 189mL",
     category: "Sugars, Sweetners & Syrups",

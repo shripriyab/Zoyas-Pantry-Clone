@@ -1,0 +1,9 @@
+.wishlist-container {
+  width: 100%;
+}
+
+.wishlist-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
