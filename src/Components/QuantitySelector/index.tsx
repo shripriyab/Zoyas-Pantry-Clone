@@ -3,7 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 import "./QuantitySelector.css";
 
-function QuantitySelector() {
+type QuantitySelectorProps = {
+  margin: string;
+};
+function QuantitySelector({ margin }: QuantitySelectorProps) {
   const [quantity, setQuantity] = useState<number>(1);
 
   const updateQuantityToBag = (value: number) => {
@@ -13,7 +16,7 @@ function QuantitySelector() {
   const minusClass = quantity <= 1 ? "disabled" : "minus";
 
   return (
-    <div className="quantity">
+    <div className="quantity" style={{ margin: margin }}>
       <button
         type="button"
         className={minusClass}

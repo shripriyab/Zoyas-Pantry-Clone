@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import Cart from "./Views/Cart";
+import ForgotPassword from "./Views/ForgotPassword";
 import Home from "./Views/Home";
 import Login from "./Views/Login";
 import Product from "./Views/Product";
@@ -23,6 +24,11 @@ function App() {
           <Route path="/register" exact component={Register} />
           <Route path="/wishlist" exact component={Wishlist} />
           <Route path="/cart" exact component={Cart} />
+          <Route
+            path="/my-account/forgot-passsword"
+            exact
+            component={ForgotPassword}
+          />
         </div>
       </BrowserRouter>
     </div>

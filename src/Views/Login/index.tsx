@@ -38,7 +38,7 @@ function Login() {
               onChange={(e) => setPassword(e.target.value)}
             />
             <div className="forgot font-bold">
-              <Link to="/my-account/lost-passsword">Forgot password</Link>
+              <Link to="/my-account/forgot-passsword">Forgot password</Link>
             </div>
           </div>
         </div>
