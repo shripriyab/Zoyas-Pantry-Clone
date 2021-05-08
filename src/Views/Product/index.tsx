@@ -81,7 +81,7 @@ export default function Product() {
           <div className="product-page-action">
             <h3 className="product-page-price">${data.price}</h3>
             <QuantitySelector margin={"0 32px"} />
-            <Button text="Add to Bag" width={250} />
+            <Button link={"#"} text="Add to Bag" width={250} />
           </div>
           <div className="product-page-meta">
             <p>

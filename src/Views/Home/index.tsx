@@ -15,7 +15,7 @@ function Home() {
             From local products to fresh produce, our expert team members will
             help you with the groceries you know and love.
           </div>
-          <Button text={"Explore the range"} width={200} />
+          <Button link={"/category"} text={"Explore the range"} width={200} />
         </div>
         <div className="banner-img">
           <img src={bannerImage} alt="Banner" />

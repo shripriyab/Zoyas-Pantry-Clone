@@ -5267,16 +5267,46 @@ export const wishlist = [
 ];
 
 export const pantryList = [
-  "Organic Beans & Lentils",
-  "Couscous & Pasta",
-  "Breakfast Favourites",
-  "Salt & Spices",
-  "Sugars, Sweetners & Syrups",
-  "French Traditional Sauces",
-  "Superfoods",
-  "Flours & Meals",
-  "Seeds & Grains",
-  "Organic Canned Vegetables",
+  {
+    option: "Organic Beans & Lentils",
+    optionIcon: "Beans",
+  },
+  {
+    option: "Couscous & Pasta",
+    optionIcon: "Grains",
+  },
+  {
+    option: "Breakfast Favourites",
+    optionIcon: "breakfast",
+  },
+  {
+    option: "Salt & Spices",
+    optionIcon: "Salt",
+  },
+  {
+    option: "Sugars, Sweetners & Syrups",
+    optionIcon: "Sugars",
+  },
+  {
+    option: "French Traditional Sauces",
+    optionIcon: "Sauces",
+  },
+  {
+    option: "Superfoods",
+    optionIcon: "Superfoods",
+  },
+  {
+    option: "Flours & Meals",
+    optionIcon: "Flours",
+  },
+  {
+    option: "Seeds & Grains",
+    optionIcon: "Seeds",
+  },
+  {
+    option: "Organic Canned Vegetables",
+    optionIcon: "Tomato",
+  },
 ];
 
 export const sortOptions = [

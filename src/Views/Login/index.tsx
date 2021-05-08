@@ -17,7 +17,7 @@ function Login() {
       <form id="login-form">
         <div className="login-form">
           <div className="login-username">
-            <label htmlFor="email" className="userDetails">
+            <label htmlFor="email" className="user-details">
               Email address *
             </label>
             <input
@@ -28,7 +28,7 @@ function Login() {
             />
           </div>
           <div className="login-password">
-            <label htmlFor="password" className="userDetails">
+            <label htmlFor="password" className="user-details">
               Password *
             </label>
             <input
@@ -42,7 +42,7 @@ function Login() {
             </div>
           </div>
         </div>
-        <Button text={"Login"} width={340} />
+        <Button link={"#"} text={"Login"} width={340} />
         <div className="create-account font-bold">
           <Link to="/register">Create an account</Link>
         </div>

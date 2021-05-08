@@ -20,7 +20,7 @@ function Register() {
         <div className="register-form">
           <div className="register-user">
             <div className="input-field">
-              <label htmlFor="firstName" className="userDetails">
+              <label htmlFor="firstName" className="user-details">
                 First Name *
               </label>
               <input
@@ -31,7 +31,7 @@ function Register() {
               />
             </div>
             <div className="input-field">
-              <label htmlFor="lastName" className="userDetails">
+              <label htmlFor="lastName" className="user-details">
                 Last Name *
               </label>
               <input
@@ -44,7 +44,7 @@ function Register() {
           </div>
           <div className="register-user">
             <div className="input-field">
-              <label htmlFor="email" className="userDetails">
+              <label htmlFor="email" className="user-details">
                 Email address *
               </label>
               <input
@@ -55,7 +55,7 @@ function Register() {
               />
             </div>
             <div className="input-field">
-              <label htmlFor="password" className="userDetails">
+              <label htmlFor="password" className="user-details">
                 Password *
               </label>
               <input
@@ -68,7 +68,7 @@ function Register() {
           </div>
         </div>
       </form>
-      <Button text={"Sign up"} width={340} />
+      <Button link={"#"} text={"Sign up"} width={340} />
       <div className="sign-up">
         <p>Already have an account?</p>
         <Link className="font-bold" to="/login">

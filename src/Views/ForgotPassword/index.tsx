@@ -16,18 +16,18 @@ function ForgotPassword() {
       <form id="forgot-password-form">
         <div className="forgot-password-form">
           <div className="forgot-password-username">
-            <label htmlFor="usernameOrEmail" className="userDetails">
+            <label htmlFor="username-or-email" className="user-details">
               Username or Email
             </label>
             <input
               value={usernameOrEmail}
               type="text"
-              id="usernameOrEmail"
+              id="username-or-email"
               onChange={(e) => setUsernameOrEmail(e.target.value)}
             />
           </div>
         </div>
-        <Button text={"Reset password"} width={363} />
+        <Button link={"#"} text={"Reset password"} width={363} />
       </form>
     </div>
   );

@@ -32,6 +32,7 @@
   z-index: -1;
   background-color: #b0e3d9 !important;
   cursor: pointer;
+  height: 39px;
 }
 
 .custom-button a::after {

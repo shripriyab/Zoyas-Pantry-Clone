@@ -11,6 +11,7 @@
   align-items: center;
   justify-items: center;
   position: relative;
+  margin: 0 110px;
 }
 
 .company-logo {
@@ -36,6 +37,9 @@
   font-weight: 700;
   display: flex;
   align-items: center;
+}
+
+.navigation-categories ul li span {
   cursor: pointer;
 }
 
@@ -43,6 +47,59 @@
   width: 2em;
   font-size: 13px;
   margin-top: 3px;
+}
+
+.pantry-open .svg-inline--fa.fa-w-14 {
+  transform: rotate(180deg);
+  transition: transform 300ms linear;
+}
+
+.pantry-dropdown {
+  box-sizing: border-box;
+  position: absolute;
+  top: 118px;
+  right: 0;
+  width: 80%;
+  background-color: #fafafa;
+  letter-spacing: 1px;
+  font-weight: 700;
+  z-index: 10;
+  transition: all 300ms;
+  padding: 40px 110px 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.pantry-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: 0 0;
+}
+
+.pantry-option span {
+  display: inline-flex;
+  align-items: center;
+  height: 40px;
+}
+
+.pantry-option span:hover {
+  color: #17aba6;
+}
+
+.pantry-option span .pantry-option-icon {
+  display: none;
+  width: 30px;
+  height: 30px;
+}
+
+.pantry-option span:hover .pantry-option-icon {
+  display: inline-flex;
+  margin-right: 5px;
 }
 
 .account-info {
@@ -53,7 +110,6 @@
 
 .account-info > div {
   margin-left: 36px;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,10 +120,39 @@
   flex-direction: column;
 }
 
+.overlay {
+  position: absolute;
+  top: 118px;
+  display: none;
+  width: 100vw;
+  height: calc(100vh - 118px);
+  z-index: 3;
+  background: rgba(68, 38, 99, 0.3);
+}
+
+.overlay-active {
+  display: block;
+}
+
+.search-overlay {
+  top: 0;
+  height: 100vh;
+}
+
 .search-icon,
 .login,
 .favourites {
   font-size: 26px;
+}
+
+.favourites a:visited,
+.login a:visited,
+.cart a:visited {
+  color: #252525;
+}
+
+.cart a {
+  text-decoration: none;
 }
 
 .cart {
@@ -76,7 +161,7 @@
   border-radius: 50%;
   background-color: #b0e3d9;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 600;
 }
 
 .black {
@@ -96,7 +181,8 @@
   color: #402661;
 }
 
-.purple:hover {
+.purple:hover,
+.pantry:hover > span {
   color: #f77566;
   transition: 300ms;
 }
@@ -107,7 +193,7 @@
   top: 100%;
   left: 50%;
   width: 100%;
-  background-color: #fafafa;
+  background-color: #fff;
   letter-spacing: 1px;
   font-weight: 700;
   height: 60px;
@@ -154,4 +240,89 @@ input:focus::placeholder {
 .submit {
   position: absolute;
   left: -9999px;
+}
+
+.search-wrapper,
+.favourites,
+.cart,
+.login a {
+  cursor: pointer;
+}
+
+.login a,
+.search-wrapper,
+.pantry {
+  z-index: 20;
+}
+
+.nav-login-dropdown {
+  box-sizing: border-box;
+  position: absolute;
+  top: 118px;
+  right: -110px;
+  width: 71%;
+  background-color: #fafafa;
+  z-index: 10;
+  padding: 120px;
+}
+
+.nav-login-dropdown ::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: 0 0;
+}
+
+.nav-login-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-login-title p {
+  margin: 0;
+  padding: 0;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+.nav-login-title p:first-child {
+  font-weight: bold;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+#nav-login-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 8px;
+  grid-gap: 40px;
+}
+
+#nav-login-email,
+#nav-login-password {
+  width: 100%;
+  padding: 0 0 8px;
+  border: 0;
+  border-bottom: 1px solid #b5b5b5;
+  background-color: transparent;
+}
+
+.nav-login-create-account {
+  text-align: left;
+}
+
+.nav-login-create-account > a {
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.nav-login-create-account > a span {
+  color: #777;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../../Components/Button";
-import logo from "./noProducts.svg";
 import "./EmptyProducts.css";
+import logo from "./noProducts.svg";
 
 type EmptyProductsProps = {
   titleText: string;
@@ -19,7 +19,7 @@ export default function EmptyProducts({ titleText }: EmptyProductsProps) {
         <p>Looks like you haven't made your choice yet.</p>
         <p>Start adding items!</p>
       </div>
-      <Button text={"Explore the range"} width={200} />
+      <Button link={"/category"} text={"Explore the range"} width={200} />
     </div>
   );
 }

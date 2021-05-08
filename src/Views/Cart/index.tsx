@@ -71,7 +71,7 @@ export default function Cart({ quantity }: CartProps) {
               <p>$567</p>
             </div>
           </div>
-          <Button text={"Proceed to checkout"} width={340} />
+          <Button link={"#"} text={"Proceed to checkout"} width={340} />
         </div>
       </div>
     </div>

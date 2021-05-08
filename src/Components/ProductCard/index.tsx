@@ -26,7 +26,7 @@ export default function ProductCard({
   isWishListView,
 }: ProductCardProps) {
   const addButton = inStock ? (
-    <Button text={"Add to Bag"} width={115} />
+    <Button link={"#"} text={"Add to Bag"} width={115} />
   ) : (
     <OutOfStock />
   );
