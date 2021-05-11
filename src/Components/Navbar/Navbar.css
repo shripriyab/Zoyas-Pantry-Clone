@@ -147,21 +147,24 @@
 
 .favourites a:visited,
 .login a:visited,
-.cart a:visited {
+.cart > a:visited {
   color: #252525;
 }
 
-.cart a {
+.cart > a {
   text-decoration: none;
-}
-
-.cart {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: #b0e3d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.cart {
   font-size: 18px;
-  font-weight: 600;
 }
 
 .black {
@@ -244,7 +247,7 @@ input:focus::placeholder {
 
 .search-wrapper,
 .favourites,
-.cart,
+.cart > a,
 .login a {
   cursor: pointer;
 }
@@ -320,9 +323,11 @@ input:focus::placeholder {
   font-size: 15px;
   letter-spacing: 0.3px;
   text-decoration: underline;
+  text-decoration-thickness: 2px;
   font-weight: 600;
+  color: #777;
 }
 
-.nav-login-create-account > a span {
+.nav-login-create-account > a:visited {
   color: #777;
 }

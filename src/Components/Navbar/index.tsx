@@ -8,6 +8,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { pantryList } from "../../data";
 import Button from "../Button";
+import CartDrawer from "../Drawer";
 import logo from "./logo.svg";
 import "./Navbar.css";
 
@@ -16,8 +17,9 @@ function Navbar() {
   const [isSearchActive, setIsSearchActive] = useState<boolean>(false);
   const [isPantryActive, setIsPantryActive] = useState<boolean>(false);
   const [isLoginActive, setIsLoginActive] = useState<boolean>(false);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [isCartActive, setIsCartActive] = useState<boolean>(false);
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
 
   const handleSubmit = () => {};
 
@@ -26,7 +28,7 @@ function Navbar() {
     : "pantry purple";
 
   const overlayClass =
-    isPantryActive || isLoginActive
+    isPantryActive || isLoginActive || isCartActive
       ? "overlay overlay-active navbar-active"
       : isSearchActive
       ? "search-overlay overlay overlay-active"
@@ -166,8 +168,13 @@ function Navbar() {
               <Icon icon={heartLine} />
             </Link>
           </div>
-          <div className="cart">
+          <div
+            className="cart"
+            onMouseEnter={() => setIsCartActive(true)}
+            onMouseLeave={() => setIsCartActive(false)}
+          >
             <Link to="/cart">0</Link>
+            {isCartActive && <CartDrawer />}
           </div>
         </div>
       </div>

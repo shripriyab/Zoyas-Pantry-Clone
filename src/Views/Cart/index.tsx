@@ -45,7 +45,7 @@ export default function Cart({ quantity }: CartProps) {
                 <QuantitySelector margin={"0"} />
               </td>
               <td>
-                <p className="item-delete">
+                <p className="item-delete font-bold">
                   <span>Delete</span>
                 </p>
               </td>

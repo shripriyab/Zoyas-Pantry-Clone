@@ -71,6 +71,7 @@ ul {
 .clear-all {
   text-decoration: underline;
   margin: 16px 0;
+  text-decoration-thickness: 2px;
 }
 
 .clear-all > span {

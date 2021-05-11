@@ -3,7 +3,7 @@ import Button from "../../Components/Button";
 import "./ForgotPassword.css";
 
 function ForgotPassword() {
-  const [usernameOrEmail, setUsernameOrEmail] = useState("");
+  const [usernameOrEmail, setUsernameOrEmail] = useState<string>("");
 
   return (
     <div className="forgot-password-container">

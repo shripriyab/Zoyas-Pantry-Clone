@@ -4,7 +4,7 @@
 
 .cart-title {
   font-size: 22px;
-  font-weight: 600;
+  font-weight: bold;
 }
 
 .cart-body {
@@ -118,7 +118,6 @@
 }
 
 .order-summary-heading {
-  margin-bottom: 10px;
   color: #b5b5b5;
   border-bottom: 1px solid #b5b5b5;
   font-size: 15px;

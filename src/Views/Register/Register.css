@@ -83,6 +83,7 @@
   color: #777;
   letter-spacing: 0.3px;
   text-decoration: underline;
+  text-decoration-thickness: 2px;
   font-weight: 600;
   margin-left: 5px;
 }

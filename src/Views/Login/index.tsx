@@ -4,8 +4,8 @@ import Button from "../../Components/Button";
 import "./Login.css";
 
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
 
   return (
     <div className="login-container">
@@ -43,7 +43,7 @@ function Login() {
           </div>
         </div>
         <Button link={"#"} text={"Login"} width={340} />
-        <div className="create-account font-bold">
+        <div className="create-account">
           <Link to="/register">Create an account</Link>
         </div>
       </form>
